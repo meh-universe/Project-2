@@ -123,7 +123,7 @@ class Yahtzee {
 
             _w.msg("Your total score is: " + score);
 
-            // input to play again
+            // Input to play again
             if (sum < 15) {
                 input = JOptionPane.showInputDialog(
                         null,
