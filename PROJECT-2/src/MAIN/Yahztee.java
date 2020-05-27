@@ -110,6 +110,7 @@ class Yahtzee {
                 }
             }
 
+            // scoring
             while ((roll < 2) && (reroll1 > 0));
             Winning prize = new Winning();
             prize.checkWinnings(aDice, wins);
@@ -118,16 +119,14 @@ class Yahtzee {
             for (z = 0; z < 15; z++) {
                 sum += wins[z]; // sets score depending on the winning choice
             }
-
             score += prize.getScore();
-
             _w.msg("Your total score is: " + score);
 
             // Input to play again
             if (sum < 15) {
                 input = JOptionPane.showInputDialog(
                         null,
-                        "Would you like to continue?" + "\nType 1 to continue or 2 to exit.",
+                        "Would you like to continue?" + "\nType 1 to CONTINUE or 2 to EXIT.",
                         "Continue?",
                         JOptionPane.INFORMATION_MESSAGE);
                 // EXIT option
